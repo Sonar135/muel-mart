@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/b782cf5553.js" crossorigin="anonymous"></script> 
+    <link rel="stylesheet" href="css/add_product.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="navbar">
+
+    </div>
+
+    <div class="content sec1">
+        <div class="brand_logo">
+            <img src="../resources\muel mart png.png" alt="">
+
+        </div>
+
+        <h1>Add Product</h1>
+
+
+        <div class="product_form">
+                <form method="" enctype="multipart/form-data">
+                    <div class="set">
+            <label for="">Product Name</label>
+            <input type="text" name="product_name">
+                    </div>
+
+                        <div class="set">
+            <label for="">Category</label>
+            
+            <div class="categories">
+                <div class="category_seed"> jewelry  </div>
+                <div class="category_seed"> Hygiene  </div>
+                <div class="category_seed"> Clothing  </div>
+                <div class="category_seed"> furniture  </div>
+                <div class="category_seed"> toys  </div>
+                <div class="category_seed"> groceries  </div>
+                <div class="category_seed"> electronics  </div>
+                <div class="category_seed"> footwear  </div>
+                <div class="category_seed"> household</div>
+                <input type="hidden" name="category" id="category">
+            </div>
+                    </div>
+
+                    <div class="set">
+                        <label for="">Price</label>
+                        <input type="number" placeholder="e.g 8500" name="price" min="0">
+                    </div>
+
+                    <div class="set">
+                        <label for="">Select Image</label>
+
+                        <input type="file" name="select_image" id="select" accept="image/*">
+                        <label for="select" id="select_image">Select From Device</label> 
+                        <input type="hidden" name="image" class="image">
+                    </div>
+
+                   
+                        <button name="submit">Add Product</button>
+                  
+                  
+
+            
+         </form>  
+        </div>
+    </div>
+
+    <div id="footer"></div>
+</body>
+<script src="js/header.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/footer.js"></script>
+<script src="js/add_product.js"></script>
+</html>

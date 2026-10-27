@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+:root{
+    --shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    --accent: #0b70df;
+    --accent_tran: #1313139b;
+    --accent_hover:#0e4c8f;
+    --accent_disabled:#08519f66;
+}
+
+
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    list-style: none;
+    border:none;
+    outline:none;
+    text-decoration: none;
+    font-weight:400;
+    scroll-behavior: smooth;
+}
+
+
+.nav{
+    width:100%;
+    height:60px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.174);
+    display:flex;
+    justify-content: space-between;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index: 10000000;
+    background: white;
+    /* backdrop-filter: saturate(150%) blur(8px); */
+}
+
+form button{
+    background: var(--accent);
+}
+
+form button:hover{
+    background: var(--accent_hover);
+}
+
+.sec1{
+    margin-top:60px;
+}
+
+.logo{
+    width:154px;
+    height:100%;
+    margin-left:20px;
+}
+
+.logo img{
+    width:90%;
+    height:90%;
+    object-fit: contain;
+}
+.center{
+    width:500px;
+    height:100%
+}
+
+.right{
+    width:230px;
+    height:100%;
+    display:flex;
+    align-items: center;
+}
+
+button:hover{
+    background: var(--accent_hover);
+    transition: .3s;
+    cursor:pointer;
+}
+
+
+
+
+.center ul{
+    width: 100%;
+    height:100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+a, #prof{
+    color:rgb(62, 62, 62);
+    cursor:pointer;
+}
+
+.center a, #prof{
+    display:block;
+    border-radius: 16px;
+    padding:5px 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size:15px;
+}
+
+#prof{
+    position:relative;
+}
+
+
+.prof_box{
+    position:absolute;
+    width: 156px;
+    padding:0 10px;
+    top:30px;
+    left:-30px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.386);
+    overflow: hidden;
+    cursor:default;
+    display:none;
+    animation: fadein .4s ease;
+}
+
+.active{
+    display:block;
+}
+
+@keyframes fadein {
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0px);
+    }
+}
+
+.prof_box i{
+    margin-left:8px;
+    color: rgba(0, 0, 0, 0.479);
+}
+
+.prof_box a:hover {
+    color:white;
+    background: var(--accent_hover);
+    transition: .3s;
+}
+
+.prof_box a:hover i{
+    color:white;
+    transition: .3s;
+}
+
+.prof_box ul{
+    width:100%;
+    display:block;
+    cursor:default;
+}
+
+.prof_box ul li{
+    width:100%;
+    text-align:center;
+    margin:10px 0;
+    text-transform: capitalize;
+}
+
+.center li{
+    width: auto;
+    text-transform: capitalize;
+}
+
+
+.social{
+    width:30px;
+    height:30px;
+    border-radius: 100%;
+    margin:0 5px;
+    background: #000;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social i{
+    color:white;
+    font-size:16px;
+}
+
+.fb{
+    background-color: #3b5998
+}
+
+.twit{
+    background-color: #1da1f2
+}
+
+.lin{
+    background-color: #0077b5
+}
+
+.yout{
+    background-color: #cd201f
+}
+
+.right ul{
+       width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.logo{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:black;
+    font-weight:800;
+    font-size:30px;
+}
+
+.content{
+    width:100%;
+}
+
+.accent{
+    color: var(--accent);
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/b782cf5553.js" crossorigin="anonymous"></script> 
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/seller_creation.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="navbar">
+
+    </div>
+
+
+      <div class="content sec1">
+        <div class="brand_logo">
+            <img src="../resources\muel mart png.png" alt="">
+
+        </div>
+
+        <h1>Create Your Business Account</h1>
+
+
+        <div class="product_form">
+                <form method="" enctype="multipart/form-data">
+                    <div class="set">
+            <label for="">Business Name</label>
+            <input type="text" name="biz_name" placeholder="A & B Enterprise">
+                    </div>
+
+                       <div class="set">
+                        <label for="">Business Address</label>
+                        <input type="text" placeholder="no 17..." name="biz_add" min="0">
+                    </div>
+
+                        <div class="set">
+            <label for="">Mode of Identification</label>
+            
+            <div class="categories">
+                <div class="id_seed"> Driver's License </div>
+                <div class="id_seed"> National ID</div>
+                <div class="id_seed"> Voters Card  </div>
+                <input type="hidden" name="mode_id" id="id">
+            </div>
+                    </div>
+
+                 
+
+                    <div class="set">
+                        <label for="">Upload Id Card</label>
+
+                        <input type="file" name="select_image" id="select" accept="image/*">
+                        <label for="select" id="select_image">Select From Device</label> 
+                        <input type="hidden" name="image" class="image">
+                    </div>
+
+                   
+                        <button name="submit">Create Business Account</button>
+                  
+                  
+
+            
+         </form>  
+        </div>
+    </div>
+
+</body>
+<script src="js/navbar.js"></script>
+<script src="js/seller_creation.js"></script>
+</html>
