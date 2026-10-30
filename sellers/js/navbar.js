@@ -1,8 +1,57 @@
+let notification_timer
+const success_notification=(text)=>{
+  clearTimeout(notification_timer)
+
+   document.querySelector(".success_notification").classList.remove("active")
+  document.querySelector(".success_notification").textContent=''
+
+       document.querySelector(".error_notification").classList.remove("active")
+  document.querySelector(".error_notification").textContent=''
+
+       document.querySelector(".success_notification").classList.add("active")
+  document.querySelector(".success_notification").textContent=text
+
+  notification_timer= setTimeout(() => {
+   document.querySelector(".success_notification").classList.remove("active")
+  document.querySelector(".success_notification").textContent=''
+  }, 4000);
+
+}
+
+const error_notification=(text)=>{
+  clearTimeout(notification_timer)
+      document.querySelector(".error_notification").classList.remove("active")
+  document.querySelector(".error_notification").textContent=''
+
+     document.querySelector(".success_notification").classList.remove("active")
+  document.querySelector(".success_notification").textContent=''
+  
+   
+
+ document.querySelector(".error_notification").classList.add("active")
+  document.querySelector(".error_notification").textContent=text
+ notification_timer= setTimeout(() => {
+        document.querySelector(".error_notification").classList.remove("active")
+  document.querySelector(".error_notification").textContent=''
+  }, 4000);
+
+
+  
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   fetch("navbar.html")
     .then(response => response.text())
     .then(data => {
+      document.querySelector("title").textContent=""
+      document.querySelector("title").textContent="Muel Mart"
+    let icon=  document.createElement("link")
+      icon.rel="icon"
+      icon.href=""
+      icon.href="../resources/favicon.png"
+
+      document.head.appendChild(icon)
+
       document.getElementById("navbar").innerHTML = data;
 
    const prof = document.getElementById("prof");

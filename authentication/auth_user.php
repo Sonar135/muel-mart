@@ -141,6 +141,7 @@
             $_SESSION["phone"]=$uidexist["phone_number"];
             $_SESSION["is_seller"]=$uidexist["is_seller"];
             $_SESSION["is_admin"]=$uidexist["is_admin"];
+            $_SESSION["business"]=$uidexist["business"];
            
             
             echo json_encode([

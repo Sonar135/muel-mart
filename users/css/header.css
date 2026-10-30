@@ -272,3 +272,45 @@ a, #prof{
     border-radius: 20px;
     cursor:pointer;
 }
+
+
+.error_notification, .success_notification{
+    height:28px;
+    padding:0 18px;
+    display:flex;
+    margin:auto;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    top:-1000px;
+    left:50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    z-index:100;
+    box-shadow: var(--shadow);
+    color:white;
+    overflow:hidden;
+}
+
+.error_notification{
+    background: rgb(170, 16, 16);
+}
+
+.success_notification{
+    background: #0b70df;
+}
+
+.error_notification.active, .success_notification.active{
+    top:90px;
+    animation: notify .3s ease;
+}
+
+@keyframes notify {
+    from{
+        top:-1000px;
+    }
+
+    to{
+        top:90px;
+    }
+}

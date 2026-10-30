@@ -29,9 +29,15 @@ form.addEventListener("submit", (e)=>{
 
     fetch("./php/seller_creation.php", {
         method:"POST",
-        data: form_data
+        body: form_data
     })
     .then(response=>response.json()).then(feedback=>{
-        
+        if(feedback.status=='empty_field'){
+            error_notification("please fill al fields");
+        }
+
+        else if(feedback.status=='success'){
+            window.location.href='../sellers/index.html'
+        }
     })
 })

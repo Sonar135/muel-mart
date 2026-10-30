@@ -12,21 +12,21 @@ signup.addEventListener("submit", (e)=>{
         .then(response=>response.json()).then(feedback=>{
 
             if(feedback.status=="empty_field"){
-                console.log("please fill all fields")
+                error_notification("please fill all fields")
             }
 
             else if(feedback.status=='invalid_email'){
-                console.log("please check email")
+                error_notification("please check email")
             }
 
              else if(feedback.status=='pwd_match'){
-                console.log("passwords don't match")
+                error_notification("passwords don't match")
             }
 
        
 
               else if(feedback.status=='email_exists'){
-                console.log("Account with email already exists")
+                error_notification("Account with email already exists")
             }
 
             if(feedback.status==="success"){

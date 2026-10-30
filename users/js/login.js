@@ -1,5 +1,13 @@
 let login= document.querySelector("form")
 
+// fetch("../session.php", {
+//     method: "GET",
+// }).then(response=>response.json()).then(feedback=>{
+//     if(feedback.status!="logged out"){
+//         window.location.href="index.html"
+//     }
+// })
+
 login.addEventListener("submit", (e)=>{
     e.preventDefault()
 
@@ -10,12 +18,17 @@ login.addEventListener("submit", (e)=>{
         body: form_data
     })
     .then(response=>response.json()).then(feedback=>{
+        if(feedback.status=="logged in"){
+            success_notification("You're Already Logged In")
+            // window.location.href="index.html"
+        }
+
         if(feedback.status=="invalid"){
-            console.log("Email or password incorrect")
+            error_notification("Email or password incorrect")
         }
 
         else if(feedback.status=="empty_field"){
-            console.log("please fill all fields")
+            error_notification("please fill all fields")
         }
 
         else if(feedback.status=="success"){
